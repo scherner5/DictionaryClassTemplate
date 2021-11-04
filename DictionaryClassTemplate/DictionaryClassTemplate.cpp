@@ -1,21 +1,23 @@
-// DictionaryClassTemplate.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
 #include <iostream>
+#include "Dictionary.h"
+#include "Dictionary.cpp"
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	Dictionary<int> dict;
+
+	dict.add("hello", 0);
+	dict.add("world", 42);
+
+	printf("Value of \"hello\" is %d\n", dict.lookUp("hello")); // Should print 0
+	printf("Value of \"world\" is %d\n", dict.lookUp("world")); // Should print 42
+
+	dict.remove("hello");
+
+	printf("Contains \"hello\"? %d\n", dict.contains("hello")); //Prints 0, i.e. false
+
+	system("pause");
+	return 0;
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

@@ -1,0 +1,5 @@
+﻿  Dictionary.cpp
+  DictionaryClassTemplate.cpp
+  Generating Code...
+DictionaryClassTemplate.obj : error LNK2019: unresolved external symbol "public: __thiscall Dictionary<int>::Dictionary<int>(void)" (??0?$Dictionary@H@@QAE@XZ) referenced in function _main
+C:\Users\scherner.5\source\repos\DictionaryClassTemplate\Debug\DictionaryClassTemplate.exe : fatal error LNK1120: 1 unresolved externals
