@@ -1,39 +1,50 @@
 #pragma once
+#include "../../DynamicallyResizeable/DynamicallyResizeable/DynamicList.h"
 
-template <class j>
+template <typename j>
 class Dictionary
 {
 public:
 	Dictionary();
-	j* dictionary;
-	j index;
+	DynamicList<const char*> words[10];
+	DynamicList<j> values[10];
+	int index;
 	j contain;
+	int value;
 	void add(const char* s, int i);
 	int lookUp(const char* x);
 	void remove(const char* y);
 	bool contains(const char* z);
 };
 
-template <class j>
+template <typename j>
+Dictionary<j>::Dictionary() {
+
+}
+
+template <typename j>
 void Dictionary<j>::add(const char* s, int i) {
-	
+	words.push(s);
+	values.push(i);
 }
 
-template <class j>
+template <typename j>
 int Dictionary<j>::lookUp(const char* x) {
-	index = 0;
-	return index;
+	index = words.index(x);
+	value = values.get(index);
+	return value;
 }
 
-template <class j>
+template <typename j>
 void Dictionary<j>::remove(const char* y) {
-
+	index = words.index(y);
+	words.remove(index);
+	values.remove(index);
 }
 
-template <class j>
+template <typename j>
 bool Dictionary<j>::contains(const char* z) {
-	contain = false;
-	return contain;
+	return words.contains(z);
 }
 
 
