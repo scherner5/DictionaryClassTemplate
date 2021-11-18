@@ -1,2 +1,12 @@
-﻿  DictionaryClassTemplate.cpp
-  DictionaryClassTemplate.vcxproj -> C:\Users\scherner.5\source\repos\DictionaryClassTemplate\Debug\DictionaryClassTemplate.exe
+﻿  Dictionary.cpp
+  DictionaryClassTemplate.cpp
+c:\users\scherner.5\source\repos\dictionaryclasstemplate\dictionaryclasstemplate\dictionary.h(27): error C2228: left of '.push' must have class/struct/union
+  c:\users\scherner.5\source\repos\dictionaryclasstemplate\dictionaryclasstemplate\dictionary.h(27): note: type is 'DynamicList<j> [10]'
+          with
+          [
+              j=int
+          ]
+  c:\users\scherner.5\source\repos\dictionaryclasstemplate\dictionaryclasstemplate\dictionary.h(26): note: while compiling class template member function 'void Dictionary<int>::add(const char *,int)'
+  c:\users\scherner.5\source\repos\dictionaryclasstemplate\dictionaryclasstemplate\dictionaryclasstemplate.cpp(9): note: see reference to function template instantiation 'void Dictionary<int>::add(const char *,int)' being compiled
+  c:\users\scherner.5\source\repos\dictionaryclasstemplate\dictionaryclasstemplate\dictionaryclasstemplate.cpp(7): note: see reference to class template instantiation 'Dictionary<int>' being compiled
+  Generating Code...
